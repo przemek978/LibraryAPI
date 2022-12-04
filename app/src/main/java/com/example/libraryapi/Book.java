@@ -14,12 +14,12 @@ public class Book  implements Serializable{
     private String cover;
     @SerializedName("number_of_pages_median")
     private String numberOfPages;
-    @SerializedName("first_publish_year")
-    private int firstPublishYear;
     @SerializedName("language")
     private List<String> languages;
     @SerializedName("publisher")
     private List<String> publishers;
+    @SerializedName("ebook_count_i")
+    private String ebookcount;
 
     public String getTitle() {
         return title;
@@ -52,11 +52,12 @@ public class Book  implements Serializable{
         this.numberOfPages = numberOfPages;
     }
 
-    public int getFirstPublishYear() {
-        return firstPublishYear;
+    public String getEbookcount(){
+        return this.ebookcount;
     }
-    public void setFirstPublishYear(int firstPublishYear) {this.firstPublishYear = firstPublishYear;}
-
+    public void setEbookcount(String ebook ){
+        this.ebookcount=ebook;
+    }
 
     public List<String> getLanguages() {
         return languages;

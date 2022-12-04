@@ -19,7 +19,7 @@ public class BookDetailsActivity extends AppCompatActivity {
     private TextView numberOfPagesTextView;
     private ImageView bookCover;
 
-    private TextView bookFirstPublishYearTextView;
+    private TextView bookEbookTextView;
     private TextView bookLanguagesTextView;
     private TextView bookPublishersTextView;
 
@@ -32,7 +32,7 @@ public class BookDetailsActivity extends AppCompatActivity {
         bookAuthorTextView = findViewById(R.id.book_author);
         numberOfPagesTextView=findViewById(R.id.number_of_pages);
         bookCover = findViewById(R.id.img_cover);
-        bookFirstPublishYearTextView = findViewById(R.id.book_first_publish_year);
+        bookEbookTextView = findViewById(R.id.book_ebook);
         bookLanguagesTextView = findViewById(R.id.book_languages);
         bookPublishersTextView = findViewById(R.id.book_publishers);
 
@@ -44,7 +44,8 @@ public class BookDetailsActivity extends AppCompatActivity {
         {
             numberOfPagesTextView.setText(getString(R.string.no_pages) +" "+ book.getNumberOfPages());
         }
-        bookFirstPublishYearTextView.setText(getString(R.string.year_published) +" "+ String.valueOf(book.getFirstPublishYear()));
+        bookEbookTextView.setText(getString(R.string.ebook_count) +" "+ book.getEbookcount());
+
         bookLanguagesTextView.setText(getString(R.string.languages) +" "+ TextUtils.join(", ", book.getLanguages()));
         bookPublishersTextView.setText(getString(R.string.publishers) +"\n "+ TextUtils.join(",\n ", book.getPublishers()));
 
